@@ -14,8 +14,31 @@
 </head>
 
 <body>
-  <h2>Running the Sinopia Stack on Amazon Web Services</h2>
-  <h2>Sidestepping the graph - Sinopia Linked Data Editor's approach for editing RDF</h2>
-  <script src="js/default.js"></script>
+  <h1>2019 BIBFRAME Workshop </h1>
+  <div class="grid-container">
+    <div class="column-1">
+      <h4>Panel 3: Concerning Infrastructure </h4>
+      <h2>Running the Sinopia Stack on Amazon Web Services</h2>
+      <div id="stack-aws"></div>
+      <a href="/sinopia-stack-aws">HTML</a>
+      <a href="#">PDF</a>
+    </div>
+    <div class="column-1">
+      <h4>Panel 5: Concerning Editors</h4>
+      <h2>Sidestepping the graph - Sinopia Linked Data Editor's approach for editing RDF</h2>
+      <div id="lde-rdf"></div>
+      <a href="/lde-edit-rdf">HTML</a>
+      <a href="#">PDF</a>
+    </div>
+  </div>
+  <div>
+    &copy;2019 Jeremy Nelson under the <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC4</a> license.
+  <script src="/js/showdown.js"></script>
+  <script src="/js/default.js"></script>
+  <script>
+    var converter = new showdown.Converter();
+    loadMarkdown("/lde-edit-rdf/intro.md", "lde-rdf");
+    loadMarkdown("/sinopia-stack-aws/intro.md", "stack-aws");
+  </script>
 </body>
 </html>

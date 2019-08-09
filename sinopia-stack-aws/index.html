@@ -1,0 +1,43 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>BIBFRAME Workshop 2019 - Running the Sinopia Stack on Amazon Web Services</title>
+  <meta name="description" content="Website for Jeremy Nelson's 2019
+  BIBFRAME Workshop panel presentation">
+  <meta name="author" content="Jeremy Nelson">
+
+  <link rel="stylesheet" href="/css/default.css">
+
+</head>
+
+<body>
+  <h3><a href="/">2019 BIBFRAME Workshop</a> - Stockholm, Sweden</h3>
+  <h1>Running the Sinopia Stack on Amazon Web Services</h1>
+  <div class="grid-container">
+    <div class="column-1">
+      <div id="background"></div>
+      <div id="cognito"></div>
+    </div>
+    <div class="column-1">
+      <div id="trellis"></div>
+      <hr>
+      <div id="aws-rds"></div>
+    </div>
+  </div>
+  <div>
+    &copy;2019 Jeremy Nelson under the <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC4</a> license.
+  </div>
+  <script src="/js/showdown.js"></script>
+  <script src="/js/default.js"></script>
+  <script>
+    var converter = new showdown.Converter();
+    loadMarkdown("/sinopia-stack-aws/intro.md", "background");
+    loadMarkdown("/sinopia-stack-aws/trellis-ldp.md", "trellis");
+    loadMarkdown("/sinopia-stack-aws/aws-rds.md", "aws-rds");
+    loadMarkdown("/sinopia-stack-aws/cognito.md", "cognito");
+  </script>
+</body>
+</html>
