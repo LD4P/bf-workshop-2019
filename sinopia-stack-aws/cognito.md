@@ -1,2 +1,1 @@
-### Amazon Web Services
-## Cognito
+## AWS Cognito
