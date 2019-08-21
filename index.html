@@ -20,7 +20,7 @@
       <h4>Panel 3: Concerning Infrastructure </h4>
       <h2>Running the Sinopia Stack on Amazon Web Services</h2>
       <div id="stack-aws"></div>
-      <a href="/bf-workshop-2019/sinopia-stack-aws">HTML</a>
+      <a href="sinopia-stack-aws">HTML</a>
       <a href="#">PDF</a>
     </div>
     <div class="column-1">
@@ -28,7 +28,7 @@
       <h2>Sidestepping the graph - Sinopia Linked Data Editor's approach for editing RDF</h2>
       <div id="lde-rdf"></div>
       <a href="lde-edit-rdf">HTML</a>
-      <a href="#">PDF</a>
+      <a href="#" onclick="generateLDEPDF()">PDF</a>
     </div>
   </div>
   <div>
@@ -36,6 +36,7 @@
   </div>
   <script src="js/showdown.js"></script>
   <script src="js/default.js"></script>
+  <script src="js/jspdf.debug.js"></script>
   <script>
     var converter = new showdown.Converter();
     loadMarkdown("lde-edit-rdf/intro.md", "lde-rdf");
