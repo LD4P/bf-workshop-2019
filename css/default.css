@@ -14,18 +14,23 @@ body {
 
 .grid-container {
   display: grid;
-
   grid-gap: .5em;
   grid-template-columns: 50% 50%;
   margin: .25em;
 }
 
 .column-1 {
-  background-color: rgb(221,215,207);
+  padding: .5em;
+}
+
+.topic {
+  background-color: rgb(255,255,255);
+  border: 2px solid rgb(221,215,207);
+  margin: 1em;
   padding: .5em;
 }
 
 .column-1 p {
-  background-color: rgb(255,255,255);
+  /* background-color: rgb(255,255,255); */
   padding: .5em;
 }

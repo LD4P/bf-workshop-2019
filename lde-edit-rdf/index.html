@@ -18,13 +18,12 @@
   <h1>Sidestepping the graph - Sinopia Linked Data Editor's approach for editing RDF</h1>
   <div class="grid-container">
     <div class="column-1">
-      <div id="intro"></div>
-      <div id="rt"></div>
-      <div id="react"></div>
+      <div id="intro" class="topic"></div>
+      <div id="rt" class="topic"></div>
     </div>
     <div class="column-1">
-      <div id="outline"></div>
-      <div id="redux"></div>
+      <div id="react" class="topic"></div>
+      <div id="redux" class="topic"></div>
     </div>
   </div>
   <div>
@@ -35,7 +34,6 @@
   <script>
     var converter = new showdown.Converter();
     loadMarkdown('intro.md', 'intro');
-    loadMarkdown('outline.md', 'outline');
     loadMarkdown('resource-templates.md', 'rt');
     loadMarkdown('react.md', 'react');
     loadMarkdown('redux.md', 'redux');

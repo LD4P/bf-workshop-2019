@@ -18,7 +18,7 @@ of the RDF type, and a list of property templates.
             "repeatable": "true",
             "type": "literal",
             "propertyURI": "http://id.loc.gov/ontologies/bflc/catalogerId",
-            "propertyLabel": "Your cataloger ID (Windows ID)",
+            "propertyLabel": "Your cataloger ID",
             "resourceTemplates": [],
             "valueConstraint": {
               "valueTemplateRefs": [],
