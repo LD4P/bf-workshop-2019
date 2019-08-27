@@ -1,3 +1,5 @@
+<img alt="Redux Log" src="../img/redux.svg" height="40" style="float:left"></img>
+
 ## Redux
 Thinking about the transformation of the Profiles with Resource Templates being
 transformed into a client-side editor but we still need a way associate any
