@@ -25,7 +25,7 @@ that are themselves one-line functions that return conditional values when calle
 by the component. Similarly, the `const handleEditClick` wraps two function calls
 that change the language and remove an item.
 
-```javascript
+<pre class="prettyprint lang-js" style="font-size: 1.25em;">
 const InputValue = (props) => {
   const isLiteral = typeof props.item.content !== 'undefined'
   const label = isLiteral ? props.item.content : props.item.uri
@@ -34,32 +34,32 @@ const InputValue = (props) => {
     props.handleEdit(label, props.item.lang)
     props.removeItem(props.reduxPath)
   }
-  ```
+</pre>
 
   Next these functions are tied and rendered in HTML with the **return** statement
   below:
 
-  ```javascript
-  return (<div id="userInput">
-    <div
-      className="rbt-token rbt-token-removeable">
+<pre class="prettyprint lang-js" style="font-size: 1.25em;">
+  return (&lt;div id="userInput"&gt;
+    &lt;div
+      className="rbt-token rbt-token-removeable"&gt;
       {label}
-      <button
+      &lt;button
         onClick={() => props.removeItem(props.reduxPath)}
-        className="close rbt-close rbt-token-remove-button">
-        <span aria-hidden="true">×</span>
-      </button>
-    </div>
-    <button
+        className="close rbt-close rbt-token-remove-button"&gt;
+        &lt;span aria-hidden="true"&gt;×&lt;/span&gt;
+      &lt;/button&gt;
+    &lt;/div&gt;
+    &lt;button
       id="editItem"
       onClick={handleEditClick}
-      className="btn btn-sm btn-literal btn-default">
+      className="btn btn-sm btn-literal btn-default"&gt;
       Edit
-    </button>
-    { isLiteral ? (<LanguageButton reduxPath={props.reduxPath}/>) : '' }
-  </div>)
+    &lt;/button&gt;
+    { isLiteral ? (&lt;LanguageButton reduxPath={props.reduxPath}/&gt;) : '' }
+  &lt;/div&gt;)
 }
-```
+</pre>
 
 
 [REACT]: https://reactjs.org/
