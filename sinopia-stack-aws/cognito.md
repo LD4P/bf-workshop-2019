@@ -16,4 +16,6 @@ service.
 After a user successfully signs-up via the [Amplify](https://aws-amplify.github.io/)
 SDK, a [JSON Web Token](https://jwt.io/).
 
+[Top](#)
+
 [COGNITO]: https://aws.amazon.com/cognito/

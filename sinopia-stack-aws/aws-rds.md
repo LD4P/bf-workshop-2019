@@ -1,4 +1,5 @@
-![RDS PostgresSQL](../img/rds-postgresql.png).
+<img alt="RDS PostgresSQL" src="../img/rds-postgresql.png" style="float:left; margin-right: .5em">
+
 ### Amazon Web Services
 ## Relational Database Service (RDS)
 
@@ -12,6 +13,9 @@ The AWS RDS services offers the following advantages:
 *  Significantly cheaper than AWS Triplestore [Neptune](https://aws.amazon.com/neptune/)
 *  Automatic backups
 *  Administrative overhead reduced
+
+
+[Top](#)
 
 [POSTGRES]: https://www.postgresql.org/
 [TRELLIS]: https://www.trellisldp.org/

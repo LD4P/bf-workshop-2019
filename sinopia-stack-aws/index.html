@@ -14,17 +14,98 @@
 </head>
 
 <body>
-  <h3><a href="/bf-workshop-2019">2019 BIBFRAME Workshop</a> - Stockholm, Sweden</h3>
-  <h1>Running the Sinopia Stack on Amazon Web Services</h1>
-  <img src="../img/sinopia-stack.png" alt="Sinopia Stack Diagram" style="width: 1200px; height: auto"/>
+  <div class="grid-header" typeof="https://schema.org/EducationEvent">
+    <div>
+      <img src="../img/bibframe-newlogo.jpg" style="height: 80px; float: right; vertical-align: center">
+    </div>
+    <div>
+      <h3><a href="/bf-workshop-2019">2019 BIBFRAME Workshop</a> - Stockholm, Sweden</h3>
+      <h1>Running the Sinopia Stack on Amazon Web Services</h1>
+    </div>
+    <div>
+      <h4><a href="https://ld4p.github.io/bf-workshop-2019/sinopia-stack-aws/">
+        https://ld4p.github.io/bf-workshop-2019/sinopia-stack-aws/
+      </a>
+     </h4>
+   </div>
+ </div>
+  <img src="../img/sinopia-stack.png" alt="Sinopia Stack Diagram"
+      usemap = "#sinopia-aws-map" />
+
+  <map name="sinopia-aws-map">
+    <area shape="rect"
+          coords = "139, 281, 249, 394"
+          target="_self"
+          href="#cognito" alt="Cognito Details"
+
+    />
+    <area shape="rect"
+          coords = "347, 15, 653, 248"
+          target="_new"
+          href="https://sinopia.io/"
+          alt="Sinopia Linked Data Editor"
+    />
+    <area shape="rect"
+          coords = "677, 22, 952, 245"
+          target = "_new"
+          href="https://profile-editor.sinopia.io/"
+          alt="Sinopia Profile Editor"
+    />
+    <area shape  = "rect"
+          coords = "467, 324, 797, 493"
+          target = "_self"
+          href   = "#fargate"
+          alt    = "Fargate Container Service"
+    />
+    <area shape  = "rect"
+          coords = "331, 358, 449, 485"
+          target = "_self"
+          href   = "#ecs"
+          alt    = "Elastic Container Service"
+    />
+    <area shape  = "rect"
+          coords = "326, 509, 531, 621"
+          target = "_self"
+          href   = "#trellis"
+          alt    = "Trellis Linkded Data Platform"
+    />
+    <area shape  = "rect"
+          coords = "685, 522, 773, 607"
+          target = "_self"
+          href   = "#ec2"
+          alt    = "Amazon Elastic Compute Cloud"
+    />
+    <area shape  = "rect"
+          coords = "883, 504, 998, 620"
+          target = "_self"
+          href   = "#active-mq"
+          alt    = "Apache ActiveMQ"
+    />
+    <area shape  = "rect"
+          coords = "860, 322, 1019, 451"
+          target = "_self"
+          href   = "#elastic-search"
+          alt    = "Elasticsearch Service"
+    />
+    <area shape  = "rect"
+          coords = "118, 551, 219, 653"
+          target = "_self"
+          href   = "#aws-rds"
+          alt    = "Relational Database Service"
+    />
+  </map>
   <div class="grid-container">
     <div class="column-1">
       <div id="background" class="topic"></div>
       <div id="cognito" class="topic"></div>
       <div id="ecs" class="topic"></div>
+      <div id="fargate" class="topic"></div>
+      <div id="ec2" class="topic"></div>
     </div>
     <div class="column-1">
       <div id="trellis" class="topic"></div>
+      <div id="elastic-search" class="topic"></div>
+      <div id="active-mq" class="topic"></div>
       <div id="aws-rds" class="topic"></div>
     </div>
   </div>
@@ -37,9 +118,13 @@
     var converter = new showdown.Converter();
     loadMarkdown("intro.md", "background");
     loadMarkdown("trellis-ldp.md", "trellis");
+    loadMarkdown("elastic-search.md", "elastic-search");
+    loadMarkdown("active-mq.md", "active-mq");
     loadMarkdown("aws-rds.md", "aws-rds");
     loadMarkdown("cognito.md", "cognito");
     loadMarkdown("ecs.md", "ecs");
+    loadMarkdown("fargate.md", "fargate");
+    loadMarkdown("ec2.md", "ec2");
   </script>
 </body>
 </html>

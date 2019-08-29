@@ -12,6 +12,15 @@ body {
   font-family: 'Roboto';
 }
 
+.grid-header {
+  background-image: url("../img/home-background.png");
+  display: grid;
+  grid-gap: .5em;
+  grid-template-columns: 10% 60% 30%;
+  margin: .25em;
+  padding-top: 1em;
+}
+
 .grid-container {
   display: grid;
   grid-gap: .5em;
