@@ -8,6 +8,9 @@ changes made by the cataloger in the Linked Data Editor made with the values in
 validations, and updating the backend Sinopia Server.
 
 To capture the current data of the application's [React][REACT] components and to
-build &hellip;
+build a RDF representation based on the values of the components, the Javascript
+[Redux][REDUX] project was used for managing the current state of the Sinopia editor
+application running in the client web browser of the user.&hellip;
 
 [REACT]: https://reactjs.org/
+[REDUX]: https://redux.js.org/

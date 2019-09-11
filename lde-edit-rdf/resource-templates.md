@@ -4,6 +4,31 @@ extending of the Library of Congresses Profiles used in the [BIBFRAME Editor][BF
 and [Profile Editor][PE] projects. Profiles, as implemented in the
 BIBFRAME Editor, are JSON files that contain one or more resource templates.
 
+Profiles also contain metadata that is not persisted within the [Trellis][TRELLIS]
+but is validated using [JSON Schema][JSCHEMA] when a Profile is uploaded in
+Sinopia's linked data editor. Defining and testing these Profiles across the
+different Sinopia cohort institutions and organizations is a community-lead
+collaborative effort with their requirements and suggestions driving the development
+priorities of the Sinopia Development team.
+
+<pre class="prettyprint lang-js" style="font-size: 1.1em;">
+{
+    "Profile": {
+        "resourceTemplates": [
+           .
+           .
+           .
+        ],
+        "id": "ld4p:profile:bf2:Item",
+        "title": "LD4P BIBFRAME 2.0 Item",
+        "description": "Item for all formats (testing), based on LC profile as of Aug-07-2019",
+        "date": "2019-08-19",
+        "author": "LD4P",
+        "schema": "https://ld4p.github.io/sinopia/schemas/0.2.0/profile.json"
+}
+
+</pre>
+
 ## Resource Templates
 Each resource template includes an identifier, information on who created the
 resource template, when it was created, a description, a URI used to create a triple
@@ -115,4 +140,6 @@ Each resource template must have at least one property template.
 </pre>
 
 [BFE]: http://bibframe.org/bfe/index.html
+[JSCHEMA]: https://json-schema.org/
 [PE]: http://bibframe.org/profile-edit/#/profile/list
+[TRELLIS]: https://www.trellisldp.org/

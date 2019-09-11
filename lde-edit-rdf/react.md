@@ -19,8 +19,8 @@ The source code for this component is available at
 [https://github.com/LD4P/sinopia_editor/blob/master/src/components/editor/property/InputValue.jsx](https://github.com/LD4P/sinopia_editor/blob/master/src/components/editor/property/InputValue.jsx)
 
 In this code snippet from that file, shows the `InputValue`
-component being defined as a `const` with an important data structure `props` that are properties
-of the component. The next two lines set two constants, `isLiteral` and `label`
+component being defined as a `const` type variable with an important data structure `props`
+that are properties of the component. The next two lines set two constants, `isLiteral` and `label`
 that are themselves one-line functions that return conditional values when called
 by the component. Similarly, the `const handleEditClick` wraps two function calls
 that change the language and remove an item.
