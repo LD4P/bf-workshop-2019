@@ -1,4 +1,4 @@
-# Background
+## Background
 The Sinopia's public facing linked data editor, available at
 [https://sinopia.io/][SINOPIA], constructs forms for creating and editing
 RDF based on resource templates' properties defined in the Library of Congress

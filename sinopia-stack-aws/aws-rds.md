@@ -1,7 +1,7 @@
-<img alt="RDS PostgresSQL" src="../img/rds-postgresql.png" style="float:left; margin-right: .5em">
+<img alt="RDS PostgresSQL" src="../img/rds-postgresql.png" style="float:right; margin-right: .5em">
 
-### Amazon Web Services
-## Relational Database Service (RDS)
+## Amazon Web Services
+# Relational Database Service (RDS)
 
 
 Sinopia server's foundation is a variant of [Trellis][TRELLIS] Linked Data Platform that

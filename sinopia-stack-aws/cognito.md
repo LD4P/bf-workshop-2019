@@ -1,7 +1,7 @@
 <img src ="../img/cognito.png" style="float: left; padding: 5px;"></img>
 
-### Amazon Web Services
-## Cognito
+## Amazon Web Services
+# Cognito
 
 To handle authentication and authorization for create, update, and delete
 operations on the Linked Data RDF and JSON resource templates in Sinopia, we

@@ -1,4 +1,4 @@
-## Amazon EC2
+# Amazon EC2
 <img alt="EC2 Container" src="../img/aws-ec2.png" style="float:left; margin-right: .5em">
 
 The other method we use to run a [Docker][DOCK] image is by hosting as part of
