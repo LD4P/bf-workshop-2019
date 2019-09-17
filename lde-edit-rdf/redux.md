@@ -1,4 +1,4 @@
-<img alt="Redux Log" src="../img/redux.svg" height="40" style="float:left"></img>
+<img alt="Redux Logo" src="../img/redux.svg" height="40" style="float:left"></img>
 
 ## Redux
 Thinking about the transformation of the Profiles with Resource Templates being
@@ -70,6 +70,62 @@ corresponding section in the Redux state.
       }
     }
 </pre>
+
+Sinopia's [Redux][REDUX] state also caches copies of the resource templates that are active in the editor that 
+is used for other functions in the editor like validation and RDF generation illustrated below: 
+
+<pre class="prettyprint lang-js" style="font-size: 1.25em;">
+ entities: {
+      resourceTemplates: {
+        'resourceTemplate:bf2:Identifiers:Barcode': {
+          id: 'resourceTemplate:bf2:Identifiers:Barcode',
+          resourceURI: 'http://id.loc.gov/ontologies/bibframe/Barcode',
+          resourceLabel: 'Barcode',
+          propertyTemplates: [
+            {
+              mandatory: 'true',
+              repeatable: 'false',
+              type: 'literal',
+              resourceTemplates: [],
+              valueConstraint: {
+                valueTemplateRefs: [],
+                useValuesFrom: [],
+                valueDataType: {},
+                defaults: [
+                  {
+                    defaultLiteral: '12345'
+                  }
+                ]
+              },
+              propertyURI: 'http://www.w3.org/1999/02/22-rdf-syntax-ns#value',
+              propertyLabel: 'Barcode',
+              editable: 'true'
+            },
+            {
+              mandatory: 'false',
+              repeatable: 'true',
+              type: 'literal',
+              resourceTemplates: [],
+              valueConstraint: {
+                valueTemplateRefs: [],
+                useValuesFrom: [],
+                valueDataType: {}
+              },
+              propertyURI: 'http://id.loc.gov/ontologies/bibframe/enumerationAndChronology',
+              propertyLabel: 'Enumeration and chronology',
+              editable: 'true'
+            }
+          ]
+        }
+      }
+  .
+  .
+  .
+}
+</pre> 
+
+Finally, we use the Redux state to store user credentials and session information using the AWS Cognito service and built with
+the Amazon [Amplify](https://aws.amazon.com/amplify/) SDK (software development kit). 
 
 [REACT]: https://reactjs.org/
 [REDUX]: https://redux.js.org/
