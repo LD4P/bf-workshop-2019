@@ -4,9 +4,9 @@
 # Fargate
 
 [Fargate][FAR] is an AWS service that runs [Docker][DOCK] containers in a state-less
-fashion with in Virtual Elastic cluster. A [Docker][DOCK] is a lightweight running
-linux process that is generated in a deterministic way from a [Docker][DOCK]
-image
+fashion within a Virtual Elastic cluster. A [Docker][DOCK] container is a lightweight isolated 
+Linux executable package of software that is generated in a deterministic way from a [Docker][DOCK]
+image.
 
 In Sinopia, we run the following Docker Images as [Fargate][FAR] tasks:
 

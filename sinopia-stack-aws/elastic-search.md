@@ -2,7 +2,8 @@
 
 ## Amazon Web Services
 # Elasticsearch Service
-For the initial `1.0.0` release, a simple search index is indexed and searched
+For the initial **1.0** release, a simple search index was created that indexes 
+a small subset of the RDF created in editor
 through the AWS hosted [Elasticsearch Service][ES]. Elasticsearch is a full-text
 search engine, based on [Lucene](https://lucene.apache.org/), that has been
 optimized for running on Amazon's cloud.

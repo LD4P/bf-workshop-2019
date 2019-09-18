@@ -1,15 +1,18 @@
 # Profiles and Resource Templates
-Sinopia generates HTML forms for creating and editing linked data based on
-extending of the Library of Congresses Profiles used in the [BIBFRAME Editor][BFE]
+Sinopia generates HTML forms for creating and editing linked data that
+extends the Library of Congress Profiles used in the [BIBFRAME Editor][BFE]
 and [Profile Editor][PE] projects. Profiles, as implemented in the
 BIBFRAME Editor, are JSON files that contain one or more resource templates.
 
 Profiles also contain metadata that is not persisted within the [Trellis][TRELLIS]
-but is validated using [JSON Schema][JSCHEMA] when a Profile is uploaded in
+but is still validated using [JSON Schema][JSCHEMA] when a Profile is uploaded in
 Sinopia's linked data editor. Defining and testing these Profiles across the
 different Sinopia cohort institutions and organizations is a community-lead
-collaborative effort with their requirements and suggestions driving the development
+collaborative effort with the cohorts requirements and suggestions driving the development
 priorities of the Sinopia Development team.
+
+Here is a snippet of a Profile with metadata like **id**, **title**, **description**, and a 
+Sinopia specific **schema** field:
 
 <pre class="prettyprint lang-js" style="font-size: 1.1em;">
 {
@@ -30,10 +33,10 @@ priorities of the Sinopia Development team.
 </pre>
 
 ## Resource Templates
-Each resource template includes an identifier, information on who created the
-resource template, when it was created, a description, a URI used to create a triple
-of the RDF type, the [JSON schema](https://json-schema.org/) to use for validating,
-and a list of property templates.
+Each Profile contains one or more resource templates with the resource template including 
+an identifier, information on who created the resource template, when it was created, a 
+description, a URI used to create a triple for a RDF type predicate, the 
+[JSON schema](https://json-schema.org/) to use for validating, and a list of property templates.
 
 <pre class="prettyprint lang-js" style="font-size: 1.1em;">
 {
@@ -52,11 +55,19 @@ and a list of property templates.
 </pre>
 
 ## Property templates
-Each resource template must have at least one property template.
-
-### "mandatory", "repeatable", "propertyURI" Properties
+Each resource template must have at least one property template. A property template contains 
+fields that determine if the property in the UI is **mandatory** or **repeatable**, with the 
+**propertyURI** field used to determine the predicate for one or more triples. The property 
+template can have default literal or URI values as well. The property template
+also contains a **type** property for determining what eventual [React][REACT] component uses to
+construct the editor UI. 
 
 ### Literal Type Property
+The most basic type of component is the Literal, that allows the cataloger to add a literal value 
+in the object position for the RDF triple. The subject is either a URI or a blank node and is 
+determined by the context in which the resource template is used. 
+
+Example **Literal** type property template:
 
 <pre class="prettyprint lang-js" style="font-size: 1.25em;">
     {
@@ -79,6 +90,7 @@ Each resource template must have at least one property template.
 </pre>
 
 ### Lookup Type Property
+Sinopia has a three different types of lookup components depending on the source for the lookup. 
 
 #### Library of Congress Lookup
 <pre class="prettyprint lang-js" style="font-size: 1.25em;">
@@ -100,6 +112,12 @@ Each resource template must have at least one property template.
 </pre>
 
 #### Questioning Authority Lookup
+[Questioning Authority](https://lookup.ld4l.org/) is a service from Cornell University and
+the University of Iowa LIS program that provides an API service that Sinopia queries and
+either JSON or RDF is returned payload. QA caches all of the RDF from ShareVDE along with
+other sources like Discogs and some [id.loc.gov](http://id.loc.gov) linked data service 
+like LCSH. 
+
 <pre class="prettyprint lang-js" style="font-size: 1.25em;">
 {
   "propertyLabel": "Related Discogs Entity",
@@ -124,6 +142,9 @@ Each resource template must have at least one property template.
 </pre>
 
 ### Resource Type Property
+The last property template type is the **resource** type that allows resource templates
+to be embedded within another resource template.
+
 <pre class="prettyprint lang-js" style="font-size: 1.25em;">
 {
     "mandatory": "false",

@@ -8,7 +8,7 @@ editor for RDF. Looking at the available options, we realized the
 good match to our requirements.
 
 An open-source project started by Aaron Coburn, [Trellis][TRELLIS] offers multiple
-backend, including a relational database, that stores entity or named graphs. Trellis
+storage backends, including a relational database, that stores entity or named graphs. Trellis
 also provides a message queue that we could leverage for indexing these named graphs
 into an AWS Elasticsearch.
 

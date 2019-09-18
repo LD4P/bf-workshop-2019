@@ -19,7 +19,10 @@ both a Triplestore and relational database backends.
 Using Amazon Web Service [Fargate](#fargate) for the initially MVP was acceptable
 for running specifically on Amazon's platform. For the long-term, Sinopia should
 be able to run in any [Docker][DOCK]-based infrastructure like [Docker Swarm][SWARM],
-or more likely, run under a [Kubernetes][KB] cluster. 
+or more likely, run under a [Kubernetes][KB] cluster for container orchestration and
+management. 
 
 [DOCK]: https://docker.io
+[KB]: https://kubernetes.io/
 [SINOPIA]: https://sinopia.io/
+[SWARM]: https://docs.docker.com/engine/swarm/

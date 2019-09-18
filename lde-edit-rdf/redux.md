@@ -1,11 +1,10 @@
 <img alt="Redux Logo" src="../img/redux.svg" height="40" style="float:left"></img>
 
 ## Redux
-Thinking about the transformation of the Profiles with Resource Templates being
-transformed into a client-side editor but we still need a way associate any
-changes made by the cataloger in the Linked Data Editor made with the values in
-[React][REACT] components so that we can do such things as generation of RDF
-validations, and updating the backend Sinopia Server.
+The transformation the Profiles with Resource Templates being
+rendered with a client-side editor is accomplished with [React][REACT] but we still 
+need a way associate all of changes made by the catalogers so that we can do such 
+things as generation of RDF validations, and updating the backend Sinopia Server.
 
 To capture the current data of the application's [React][REACT] components and to
 build a RDF representation based on the values of the components, the Javascript
@@ -72,7 +71,7 @@ corresponding section in the Redux state.
 </pre>
 
 Sinopia's [Redux][REDUX] state also caches copies of the resource templates that are active in the editor that 
-is used for other functions in the editor like validation and RDF generation illustrated below: 
+is used for other functions in the editor like validation and RDF generation and is illustrated below: 
 
 <pre class="prettyprint lang-js" style="font-size: 1.25em;">
  entities: {

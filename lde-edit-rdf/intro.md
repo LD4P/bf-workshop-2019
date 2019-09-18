@@ -3,7 +3,7 @@ The Sinopia's public facing linked data editor, available at
 [https://sinopia.io/][SINOPIA], constructs forms for creating and editing
 RDF based on resource templates' properties defined in the Library of Congress
 derived Profiles. Using [JSON Schema][JSCHEMA] validation that
-is versioned and available at https://github.com/LD4P/sinopia/tree/master/schemas.
+is versioned and available at [https://github.com/LD4P/sinopia/tree/master/schemas][SCHEMAS].
 
 The editor's use of a more modern Javascript [React][REACT]
 user interface library coupled with the [Redux][REDUX] library for application-state
@@ -16,5 +16,6 @@ complex SPARQL statements for querying and updating a RDF triplestore.
 [JSCHEMA]: https://json-schema.org/
 [REACT]: https://reactjs.org/
 [REDUX]: https://redux.js.org/
+[SCHEMAS]: https://github.com/LD4P/sinopia/tree/master/schemas
 [SINOPIA]: https://sinopia.io/
 [TRELLIS]: https://www.trellisldp.org/

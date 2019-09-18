@@ -3,7 +3,7 @@
 ## React
 
 An open-source project sponsored by [Facebook](https://facebook.com),
-[React][REACT] is a Javascript module for building user interfaces. Early on,
+[React][REACT] is a very popular Javascript module for building user interfaces. Early on,
 Sinopia adopted [React][REACT] as a way to dynamically generate the HTML
 elements for creating and editing linked data.
 
@@ -11,18 +11,19 @@ elements for creating and editing linked data.
 Most of the [React][REACT] components in Sinopia are pure functions that either
 generate HTML elements, css classes, and behavior or provide a collection-level
 container for other React components. For example the `InputValue` component,
-pictured below
+pictured below is an example of a **literal** component that is **mandatory**, 
+not **repeatable**, and has a default value: 
 
 ![Barcode InputValue](../img/InputValue.png)
 
 The source code for this component is available at
 [https://github.com/LD4P/sinopia_editor/blob/master/src/components/editor/property/InputValue.jsx](https://github.com/LD4P/sinopia_editor/blob/master/src/components/editor/property/InputValue.jsx)
 
-In this code snippet from that file, shows the `InputValue`
-component being defined as a `const` type variable with an important data structure `props`
+In this code snippet from that Javascript module, the `InputValue`
+component is defined as a `const` type variable with an important data structure `props`
 that are properties of the component. The next two lines set two constants, `isLiteral` and `label`
-that are themselves one-line functions that return conditional values when called
-by the component. Similarly, the `const handleEditClick` wraps two function calls
+that are themselves one-line functions that return conditional values when 
+the component is rendered in the client web browser. Similarly, the `const handleEditClick` wraps two function calls
 that change the language and remove an item.
 
 <pre class="prettyprint lang-js" style="font-size: 1.25em;">
